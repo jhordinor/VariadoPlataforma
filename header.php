@@ -14,7 +14,7 @@
                         Opciones
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Opción 1</a></li>
+                        <li><a class="dropdown-item" href="image_enhancement.php">Mejora Imagen</a></li>
                         <li><a class="dropdown-item" href="#">Opción 2</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Más opciones</a></li>
