@@ -8,9 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Incluir el menú -->
-    <?php include 'header.php'; ?>
-
+    <?php require_once BASE_PATH . '/app/views/layouts/header.php'; ?>
+    
     <!-- Banner Section -->
     <div class="container-fluid p-0">
         <div class="position-relative">
@@ -22,13 +21,14 @@
                 <h1 class="display-3 fw-bold mb-4">Bienvenido a Nuestra Plataforma</h1>
                 <p class="lead mb-4">Descubre oportunidades increíbles y conéctate con profesionales</p>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <a href="login.php" class="btn btn-primary btn-lg px-4 gap-3">Iniciar Sesión</a>
+                    <a href="/?controller=auth&action=login" class="btn btn-primary btn-lg px-4 gap-3">Iniciar Sesión</a>
                     <button type="button" class="btn btn-outline-light btn-lg px-4">Más Información</button>
                 </div>
             </div>
         </div>
     </div>
 
+    <?php require_once BASE_PATH . '/app/views/layouts/footer.php'; ?>
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
