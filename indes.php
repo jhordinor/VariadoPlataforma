@@ -8,6 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Incluir el menú -->
+    <?php include 'header.php'; ?>
+
     <!-- Banner Section -->
     <div class="container-fluid p-0">
         <div class="position-relative">
