@@ -1,5 +1,6 @@
-<?php require_once 'app/views/layouts/header.php'; ?>
-<link rel="stylesheet" href="public/css/image.css">
+<?php require_once dirname(__DIR__) . '/layouts/header.php'; ?>
+<link rel="stylesheet" href="/VariadoPlataforma/public/css/image.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <div class="container mt-5">
     <h2 class="text-center mb-4">Mejora de Imágenes</h2>
@@ -9,7 +10,7 @@
             <div class="card">
                 <div class="card-body">
                     <?php if (!isset($_SESSION['enhanced_image'])): ?>
-                    <form action="index.php?controller=image&action=enhancement" method="POST" enctype="multipart/form-data">
+                    <form action="/VariadoPlataforma/public/index.php?controller=image&action=enhancement" method="POST" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="image" class="form-label">
                                 <i class="fas fa-image me-2"></i>Selecciona una imagen
@@ -58,7 +59,7 @@
                         <button id="downloadBtn" class="btn btn-success me-2">
                             <i class="fas fa-download me-2"></i>Descargar
                         </button>
-                        <a href="index.php?controller=image&action=enhancement" class="btn btn-danger">
+                        <a href="/VariadoPlataforma/public/index.php?controller=image&action=enhancement&cancel=true" class="btn btn-danger">
                             <i class="fas fa-times me-2"></i>Cancelar
                         </a>
                     </div>
@@ -69,5 +70,5 @@
     </div>
 </div>
 
-<script src="public/js/image.js"></script>
-<?php require_once 'app/views/layouts/footer.php'; ?>
+<script src="/VariadoPlataforma/public/js/image.js"></script>
+<?php require_once dirname(__DIR__) . '/layouts/footer.php'; ?>

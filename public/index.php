@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 session_start();
 define('BASE_PATH', dirname(__DIR__));
 require_once BASE_PATH . '/config/database.php';
@@ -32,10 +35,17 @@ if (isset($controllers[$controller])) {
         if (method_exists($controllerInstance, $action)) {
             $controllerInstance->$action();
         } else {
-            header('Location: index.php');
+            header('HTTP/1.0 404 Not Found');
+            echo "Acción no encontrada";
         }
+    } else {
+        header('HTTP/1.0 404 Not Found');
+        echo "Controlador no encontrado";
     }
+} else {
+    header('HTTP/1.0 404 Not Found');
+    echo "Ruta no encontrada";
 }
-?>
 // Agregar al inicio del archivo, después de session_start()
-define('BASE_PATH', dirname(__DIR__));
+//define('BASE_PATH', dirname(__DIR__));
+?>
